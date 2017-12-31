@@ -1,5 +1,7 @@
 export interface Page {
-    Index: string;
-    Header: string;
-    Content: string;        
+    index: string;
+    header: string;
+    content: string;        
+    nextPage: Page;
+    previousPage: Page;
 }

@@ -14,6 +14,8 @@ export class PagesComponent implements OnInit {
     constructor(private pageService: PageService) { }
 
     ngOnInit() {
-        this.pageService.getPageList().subscribe(p => this.pages = p);
+        this.pageService
+            .getPages()
+            .subscribe(p => this.pages = p);
     }
 }
