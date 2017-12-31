@@ -1,0 +1,21 @@
+﻿[{"Ordering":"1.0.0.0","Header":"Foo","Content":"Lorem ibsum","Nextpage":{"Ordering":"1.1.0.0","Header":"Foooooo"},"PreviousPage":null},{"Ordering":"1.1.0.0","Header":"Foooooo","Content":"Dolori","Nextpage":{"Ordering":"1.1.0.1","Header":"Neue Seite"},"PreviousPage":{"Ordering":"1.0.0.0","Header":"Foo"}},{"Ordering":"1.1.0.1","Header":"Neue Seite","Content":"Text","Nextpage":{"Ordering":"1.1.1.0","Header":"SubSubSection"},"PreviousPage":{"Ordering":"1.1.0.0","Header":"Foooooo"}},{"Ordering":"1.1.1.0","Header":"SubSubSection","Content":"Noch mehr Text","Nextpage":null,"PreviousPage":{"Ordering":"1.1.0.1","Header":"Neue Seite"}}]       "Content": "Text",
+        "Nextpage": {
+            "Ordering": "1.1.1.0",
+            "Header": "SubSubSection"
+        },
+        "PreviousPage": {
+            "Ordering": "1.1.0.0",
+            "Header": "Foooooo"
+        }
+    },
+    {
+        "Ordering": "1.1.1.0",
+        "Header": "SubSubSection",
+        "Content": "Noch mehr Text",
+        "Nextpage": null,
+        "PreviousPage": {
+            "Ordering": "1.1.0.1",
+            "Header": "Neue Seite"
+        }
+    }
+]
