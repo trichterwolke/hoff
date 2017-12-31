@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { PageService  } from './services/page.service';
+
 
 import { AppComponent } from './app.component';
 import { PageComponent } from './components/page/page.component';
@@ -12,10 +14,10 @@ import { PagesComponent } from './components/pages/pages.component';
   declarations: [
     AppComponent,
     PageComponent,
-    PagesComponent
+    PagesComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpModule
   ],
   providers: [PageService],
   bootstrap: [AppComponent]
