@@ -1,4 +1,7 @@
 <h1>{{ index }} {{ header }}</h1>
 <a class="next-link" routerLink="/pages">Zurück</a>
-<markdown [data]="content"></markdown>
+<!--markdown [data]="content"></markdown-->
+<!--div [innerHTML]="content"></div-->
+<div #content></div>
+
 <a *ngIf="nextPageIndex != null" class="next-link" routerLink="/page/{{ nextPageIndex }}/">Weiter mit {{ nextPageHeader }}</a>

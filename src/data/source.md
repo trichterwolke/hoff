@@ -113,13 +113,11 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
 
-Test Section
-============
+Question
+========
 
-Bla bla
-<strong>Hier kommt eine frage</strong>
+QUEST
 <qustion></question>
-
 
 ### Documentation for previous releases
 

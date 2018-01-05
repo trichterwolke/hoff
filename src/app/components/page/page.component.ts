@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Page } from '../../entities/page';
 import { PageService } from '../../services/page.service';
 import { ActivatedRoute } from '@angular/router';
@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PageComponent implements OnInit {
 
+	@ViewChild('content') content: ElementRef;
+	
 	constructor(private pageService: PageService,
 		private route: ActivatedRoute, ) { }
 
@@ -18,7 +20,8 @@ export class PageComponent implements OnInit {
 			this.pageService.getPage(params.get('index')).subscribe(res => {
 				this.index = res.index.substring(0, 5);
 				this.header = res.header;
-				this.content = res.content;
+				//this.content = res.content;
+				this.setContent(res.content);
 
 				if (res.nextPage !== null) {
 					this.nextPageIndex = res.nextPage.index;
@@ -43,11 +46,15 @@ export class PageComponent implements OnInit {
 
 	public index: string;
 	public header: string;
-	public content: string;
+	//public content: string;
 
 	public nextPageIndex: string;
 	public nextPageHeader: string;
 	public previousPageIndex: string;
 	public previousPageHeader: string;
+
+	setContent(content) {
+        this.content.nativeElement.innerHTML = content;
+    }
 
 }
